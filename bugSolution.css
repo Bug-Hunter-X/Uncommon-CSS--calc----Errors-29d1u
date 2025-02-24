@@ -1,0 +1,23 @@
+/* Correct usage of calc() */
+.element {
+  width: calc(100% - 20px);
+  height: calc(50% + 10px);
+  padding: calc((100px + 50px)/2);
+  /* Properly nested calc() functions*/
+  margin: calc(2 * (10px + 5px));
+}
+
+/* Incorrect usage - Missing Parentheses */
+/*.element {
+  width: calc100% - 20px; /* Missing parentheses */
+}*/
+
+/* Incorrect usage - Incorrect Operator */
+/*.element {
+  width: calc(100% - 20px + 10px); /* Order of operations issue; missing parentheses to enforce desired order*/
+}*/
+
+/*Incorrect usage - Improper nesting */
+/*.element {
+  width: calc(calc(100% - 20px) - 10px); /*Unnecessary nesting and potential errors if inner calc is invalid*/
+}*/
